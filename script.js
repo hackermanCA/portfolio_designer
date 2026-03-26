@@ -1,18 +1,27 @@
 // Sélection des éléments
-            const menuBurger = document.getElementById('menuBurger');
-            const menu = document.getElementById('menu');
+const menuBurger = document.getElementById('menuBurger');
+const menu = document.getElementById('menu');
 
-            // Affichage ou masquage du menu au clic
+// Affichage ou masquage du menu au clic
 if (menuBurger) {
   menuBurger.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
   });
 }
 
 // Cacher le menu si on clique en dehors
 document.addEventListener('click', (event) => {
   if (menu && menuBurger && !menu.contains(event.target) && !menuBurger.contains(event.target)) {
-    menu.classList.remove('active');
+    menu.style.display = 'none';
+  }
+});
+
+// Animation des barres de compétences
+window.onload = () => {
   const bars = document.querySelectorAll('.progress');
   bars.forEach(bar => {
     let width = bar.style.width;

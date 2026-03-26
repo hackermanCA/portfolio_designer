@@ -64,30 +64,56 @@ nav a:active{
   border-bottom: 3px solid #b74b4b;
 }
 
+.menu-burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.menu-burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: black;
+  border: 2px solid #b74b4b;
+  border-top: none;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.menu a {
+  color: white;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.menu a:hover {
+  color: #b74b4b;
+}
+
 @media(max-width:995px){
   nav{
-    position: absolute;
     display: none;
-    top: 0;
-    right: 0;
-    width: 40%;
-    border-left: 3px solid #b74b4b;
-    border-bottom: 3px solid #b74b4b;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem solid;
-    background-color: black;
-    border-top: 0.1rem solid rgba(0,0,0,0,1);
   }
 
-  nav.active{
-    display: block;
+  .menu-burger {
+    display: flex;
   }
 
-  nav a:hover,
-  nav a.active{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #b74b4b;
+  .menu.active {
+    display: flex;
   }
 }
 

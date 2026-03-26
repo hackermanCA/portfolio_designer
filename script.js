@@ -3,19 +3,16 @@
             const menu = document.getElementById('menu');
 
             // Affichage ou masquage du menu au clic
-            menuBurger.addEventListener('click', () => {
-                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-            });
+if (menuBurger) {
+  menuBurger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+}
 
-            // Cacher le menu si on clique en dehors
-            document.addEventListener('click', (event) => {
-                if (!menu.contains(event.target) && !menuBurger.contains(event.target)) {
-                    menu.style.display = 'none';
-                }
-            });
-
-// Animation des barres de compétences
-window.onload = () => {
+// Cacher le menu si on clique en dehors
+document.addEventListener('click', (event) => {
+  if (menu && menuBurger && !menu.contains(event.target) && !menuBurger.contains(event.target)) {
+    menu.classList.remove('active');
   const bars = document.querySelectorAll('.progress');
   bars.forEach(bar => {
     let width = bar.style.width;

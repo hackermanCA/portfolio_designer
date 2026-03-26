@@ -50,10 +50,10 @@ function sendToWhatsApp() {
   const whatsappMessage = `Nom: ${name}\nEmail: ${email}\nSujet: ${subject}\nMessage: ${message}`;
 
   // Numéro WhatsApp (sans + et espaces)
-  const phoneNumber = '997129549';
+  const phoneNumber = '243997129549';
 
   // URL WhatsApp
-  const whatsappURL = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Redirection vers WhatsApp
   window.location.href = whatsappURL;

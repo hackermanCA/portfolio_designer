@@ -65,7 +65,7 @@ nav a:active{
 }
 
 .menu-burger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
   margin-right: 2rem;
@@ -92,6 +92,10 @@ nav a:active{
   flex-direction: column;
 }
 
+.menu.active {
+  display: flex;
+}
+
 .menu a {
   color: white;
   padding: 0.5rem 0;
@@ -106,10 +110,6 @@ nav a:active{
 @media(max-width:995px){
   nav{
     display: none;
-  }
-
-  .menu-burger {
-    display: flex;
   }
 
   .menu.active {

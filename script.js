@@ -25,3 +25,30 @@ window.onload = () => {
     }, 500);
   });
 };
+
+// Gestion de l'envoi du formulaire vers WhatsApp
+function sendToWhatsApp() {
+  // Récupération des valeurs du formulaire
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // Vérification que tous les champs sont remplis
+  if (!name || !email || !subject || !message) {
+    alert('Veuillez remplir tous les champs.');
+    return;
+  }
+
+  // Construction du message WhatsApp
+  const whatsappMessage = `Nom: ${name}\nEmail: ${email}\nSujet: ${subject}\nMessage: ${message}`;
+
+  // Numéro WhatsApp (sans + et espaces)
+  const phoneNumber = '997129549';
+
+  // URL WhatsApp
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Redirection vers WhatsApp
+  window.location.href = whatsappURL;
+}

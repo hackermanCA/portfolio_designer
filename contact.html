@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Portfolio Graphiste</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+ <header>
+    <a href="#" class="logo">Chris</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Skills.html">Skills</a>
+        <a href="apropos.html">À propos</a>
+        <a href="mes_projets.html">Projets</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+ </header>
+
+ <section class="contact">
+    <div class="contact-content">
+        <h2>Contactez-moi</h2>
+        <p>Prêt à collaborer ? Envoyez-moi un message et discutons de votre projet.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Informations de Contact</h3>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>chriskamb@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+243 997129549</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>RDC, Kinshasa</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="button" class="btn" onclick="sendToWhatsApp()">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ </section>
+ <script src="script.js"></script>
+</body>
+</html>

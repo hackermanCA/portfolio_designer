@@ -2,37 +2,72 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mes Projets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets - Portfolio Graphiste</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <!-- Bouton menu burger -->
-        <div class="menu-burger" id="menuBurger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+ <header>
+    <a href="#" class="logo">Chris</a>
 
-        <!-- Menu déroulant -->
-        <div class="menu" id="menu">
-            <a href="index.html">Accueil</a>
-            <a href="apropos.html">À propos</a>
-            <a href="competences.html">Mes compétences</a>
-            <a href="mes_projets.html">Mes_projets</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Skills.html">Skills</a>
+        <a href="apropos.html">À propos</a>
+        <a href="mes_projets.html" class="active">Projets</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+ </header>
+
+ <section class="projects">
+    <div class="projects-content">
+        <h2>Mes Projets</h2>
+        <p>Découvrez quelques-unes de mes créations récentes en design graphique et web.</p>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="assets/img/projet1.jpeg" alt="Projet 1">
+                <div class="project-overlay">
+                    <h3>Logo Design</h3>
+                    <p>Création d'un logo moderne pour une entreprise tech.</p>
+                    <a href="#" class="project-link">Voir plus</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/img/projet2.jpeg" alt="Projet 2">
+                <div class="project-overlay">
+                    <h3>Affiche Promotionnelle</h3>
+                    <p>Design d'affiche pour un événement culturel.</p>
+                    <a href="#" class="project-link">Voir plus</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/img/projet3.jpeg" alt="Projet 3">
+                <div class="project-overlay">
+                    <h3>Site Web</h3>
+                    <p>Interface utilisateur pour un site e-commerce.</p>
+                    <a href="#" class="project-link">Voir plus</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/img/projet4.jpeg" alt="Projet 4">
+                <div class="project-overlay">
+                    <h3>Brochure</h3>
+                    <p>Conception d'une brochure corporate.</p>
+                    <a href="#" class="project-link">Voir plus</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/img/projet5.jpeg" alt="Projet 5">
+                <div class="project-overlay">
+                    <h3>Illustration</h3>
+                    <p>Illustration vectorielle pour un livre pour enfants.</p>
+                    <a href="#" class="project-link">Voir plus</a>
+                </div>
+            </div>
         </div>
-  <header>
-      <div class="logo">Mon Portfolio</div>
-  </header>
-  <section class="projects">
-    <h2>Mes Créations</h2>
-    <div class="gallery">
-    <img src="assets/projets/projet1.jpeg" alt="Projet 1">
-    <img src="assets/projets/projet2.jpeg" alt="Projet 2">
-    <img src="assets/projets/projet3.jpeg" alt="Projet 3">
-    <img src="assets/projets/projet4.jpeg" alt="Projet 4">
-    <img src="assets/projets/projet5.jpeg" alt="Projet 5">
     </div>
-  </section>
-  <script src="script.js"></script>
+ </section>
 </body>
 </html>

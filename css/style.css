@@ -558,6 +558,53 @@ span{
   color: #b74b4b;
 }
 
+/* Modal plein écran pour image projet */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 96vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 2px solid #b74b4b;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 30px rgba(183, 75, 75, 0.8);
+}
+
+.modal-caption {
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  color: #fff;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-weight: 700;
+}
+
+.modal-close:hover {
+  color: #b74b4b;
+}
+
 @media(max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;

@@ -58,3 +58,48 @@ function sendToWhatsApp() {
   // Redirection vers WhatsApp
   window.location.href = whatsappURL;
 }
+
+// Modal image plein écran pour projets
+const projectItems = document.querySelectorAll('.project-item');
+const projectModal = document.getElementById('projectModal');
+const modalImage = document.getElementById('modalImage');
+const modalCaption = document.getElementById('modalCaption');
+const modalClose = document.querySelector('.modal-close');
+
+projectItems.forEach(item => {
+  item.addEventListener('click', (event) => {
+    // Empêche la redirection du lien "Voir plus"
+    if (event.target.classList.contains('project-link')) {
+      event.preventDefault();
+    }
+
+    const image = item.querySelector('img');
+    if (!image) return;
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt || 'Projet agrandi';
+    modalCaption.textContent = item.querySelector('h3')?.textContent || image.alt || '';
+    projectModal.style.display = 'flex';
+  });
+});
+
+const closeModal = () => {
+  projectModal.style.display = 'none';
+  modalImage.src = '';
+};
+
+if (modalClose) {
+  modalClose.addEventListener('click', closeModal);
+}
+
+projectModal.addEventListener('click', (event) => {
+  if (event.target === projectModal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});

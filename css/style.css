@@ -592,6 +592,7 @@ span{
   color: #fff;
   font-size: 1.8rem;
   text-align: center;
+  display: none; /* h3 non affiché dans le modal par défaut */
 }
 
 .modal-close {

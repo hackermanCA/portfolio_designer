@@ -78,7 +78,9 @@ projectItems.forEach(item => {
 
     modalImage.src = image.src;
     modalImage.alt = image.alt || 'Projet agrandi';
-    modalCaption.textContent = item.querySelector('h3')?.textContent || image.alt || '';
+    const captionText = item.querySelector('h3')?.textContent || '';
+    modalCaption.textContent = captionText;
+    modalCaption.style.display = captionText ? 'block' : 'none';
     projectModal.style.display = 'flex';
   });
 });
